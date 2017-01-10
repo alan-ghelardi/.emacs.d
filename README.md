@@ -1,2 +1,2 @@
 # .emacs.d
-My personal Emacs settings.
+**My personal Emacs settings.**

@@ -1,5 +1,29 @@
-(require 'package)
+;;;; 
+;; Emacspeak settings.
+;;;;
 
+;; The location of emacspeak-setup.el file, located at the local emacspeak repository
+;; cloned from https://github.com/tvraman/emacspeak. 
+(defvar emacspeak-setup-path "~/code/emacspeak/lisp/emacspeak-setup.el")
+
+;; Initial speech settings.
+(defvar speech-language "pt")
+(defvar speech-rate 310)
+ 
+ ;; set up Emacspeak.
+(load-file emacspeak-setup-path)
+
+;; Set speech settings defined previously. 
+(dtk-set-language speech-language)
+(dtk-set-rate speech-rate)
+
+
+;;;;
+;; Packages.
+;;
+
+;; Define package repositories.
+(require 'package)
 (add-to-list 'package-archives
   '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
@@ -10,19 +34,14 @@
 (unless package-archive-contents
   (package-refresh-contents))
 
-(defvar emacspeak-setup-path "~/code/emacspeak/lisp/emacspeak-setup.el")
-(defvar speech-language "pt")
-(defvar speech-rate 310)
-
+  ;; The packages you want installed.
+;; These packages can be installed with M-x package-install.
+;; Add new packages to the list below:  
 (defvar my-packages '(
   better-defaults
   projectile
 clojure-mode
   cider))
-
-(load-file emacspeak-setup-path)
-(dtk-set-language speech-language)
-(dtk-set-rate speech-rate)
 
 (dolist (p my-packages)
   (unless (package-installed-p p)
