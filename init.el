@@ -1,22 +1,12 @@
-;;;; 
-;; Emacspeak settings.
+;;;;
+;;
 ;;;;
 
-;; The location of emacspeak-setup.el file, located at the local emacspeak repository
-;; cloned from https://github.com/tvraman/emacspeak. 
-(defvar emacspeak-setup-path "~/code/emacspeak/lisp/emacspeak-setup.el")
+;; Add the customizations directory to our load path.
+(add-to-list 'load-path "~/.emacs.d/customizations")
 
-;; Initial speech settings.
-(defvar speech-language "pt")
-(defvar speech-rate 310)
- 
- ;; set up Emacspeak.
-(load-file emacspeak-setup-path)
-
-;; Set speech settings defined previously. 
-(dtk-set-language speech-language)
-(dtk-set-rate speech-rate)
-
+;; Load Emacspeak immediately. 
+(load "emacspeak.el")
 
 ;;;;
 ;; Packages.
@@ -24,33 +14,35 @@
 
 ;; Define package repositories.
 (require 'package)
+
 (add-to-list 'package-archives
-  '("marmalade" . "http://marmalade-repo.org/packages/") t)
-(add-to-list 'package-archives
-'("melpa" . "http://melpa.milkbox.net/packages/") t)
+  '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives 
+  '("gnu" . "http://elpa.gnu.org/packages/"))
 
 (package-initialize)
 
-(unless package-archive-contents
-  (package-refresh-contents))
+;; Install use-package if necessary.
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-  ;; The packages you want installed.
-;; These packages can be installed with M-x package-install.
-;; Add new packages to the list below:  
-(defvar my-packages '(
-  projectile
-clojure-mode
-  cider))
+  (require 'use-package)
+  
+;;;;
+;; Customizations.
+;;;;
+(load "clojure-support.el")
+(load "shell-integration.el")
+(load "smartparens-setup.el")
+(load "ui.el")
 
-(dolist (p my-packages)
-  (unless (package-installed-p p)
-    (package-install p)))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (cider clojure-mode projectile))))
+ '(package-selected-packages (quote (projectile paredit company cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
