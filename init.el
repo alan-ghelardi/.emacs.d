@@ -35,6 +35,7 @@
 (load "clojure-support.el")
 (load "shell-integration.el")
 (load "smartparens-setup.el")
+(load "smartparens-advice.el")
 (load "ui.el")
 
 (custom-set-variables
