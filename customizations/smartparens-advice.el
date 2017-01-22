@@ -34,7 +34,7 @@
         (emacspeak-speak-word 1)))))
 
 (defadvice sp-kill-hybrid-sexp (before emacspeak pre act comp)
-  "Speak line before killing it. "
+  "Speak sexp before killing it. "
   (when (ems-interactive-p)
     (emacspeak-auditory-icon 'delete-object)
     (when dtk-stop-immediately (dtk-stop))
