@@ -1,6 +1,7 @@
-;;;
-;; Add speech support for some keybindings of SmartParens package. 
-;;
+;;;;
+;; Add advice forms to Smart Parens since Emacspeak doesn't offer out-of-box support for this package.
+;; The advices below were simply copied from emacspeak-advice.el and adapted to work properly with Smart parens.  
+;;;;
 
 (defadvice sp-backward-delete-char (around emacspeak pre act comp)
      "Speak character you're deleting."
@@ -39,4 +40,4 @@
     (when dtk-stop-immediately (dtk-stop))
     (let ((dtk-stop-immediately nil))
       (dtk-tone 500 30)
-      (emacspeak-speak-line 1))))
+      (emacspeak-speak-sexp))))
