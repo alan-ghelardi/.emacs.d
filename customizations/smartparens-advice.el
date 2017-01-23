@@ -41,3 +41,22 @@
     (let ((dtk-stop-immediately nil))
       (dtk-tone 500 30)
       (emacspeak-speak-sexp))))
+
+(loop
+ for f in
+ '(sp-beginning-of-sexp sp-end-of-sexp)
+ do
+ (eval
+  `(defadvice ,f (around emacspeak pre act comp)
+     "Speak sexp after moving."
+     (if (ems-interactive-p)
+         (let ((start (point))
+               (end (line-end-position)))
+           ad-do-it
+           (emacspeak-auditory-icon 'paragraph)
+           (cond
+            ((>= end (point))
+             (emacspeak-speak-region start (point)))
+            (t (emacspeak-speak-line))))
+       ad-do-it)
+     ad-return-value)))

@@ -1,8 +1,13 @@
 ;;;;
 ;; Smartparens set-up and configurations.
 ;;;;
-(use-package smartparens-config
-  :ensure smartparens
+(use-package smartparens
+  :ensure t
+
+  :bind (
+  ("C-M-a" . sp-beginning-of-sexp)   
+  ("C-M-E" . sp-end-of-sexp))
+  
   :config
   (progn
     (show-smartparens-global-mode t)))
