@@ -44,7 +44,8 @@
 
 (loop
  for f in
- '(sp-beginning-of-sexp sp-end-of-sexp)
+ '(sp-beginning-of-sexp sp-end-of-sexp
+			sp-forward-sexp sp-backward-sexp)
  do
  (eval
   `(defadvice ,f (around emacspeak pre act comp)
@@ -60,3 +61,15 @@
             (t (emacspeak-speak-line))))
        ad-do-it)
      ad-return-value)))
+
+(loop
+ for f in
+ '(sp-next-sexp sp-previous-sexp)
+ do
+ (eval
+  `(defadvice ,f (after emacspeak pre act comp)
+     "Speak line."
+     (when (ems-interactive-p)
+       (emacspeak-auditory-icon 'section)
+       (let ((emacspeak-show-point t))
+         (emacspeak-speak-line))))))
