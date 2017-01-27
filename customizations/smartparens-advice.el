@@ -42,6 +42,18 @@
       (dtk-tone 500 30)
       (emacspeak-speak-sexp))))
 
+(defadvice sp-kill-region (around emacspeak pre act comp)
+  "Indicate region has been killed.
+Use an auditory icon if possible."
+  (cond
+   ((ems-interactive-p)
+    (let ((count (count-lines (region-beginning) (region-end))))
+      ad-do-it
+      (emacspeak-auditory-icon 'delete-object)
+      (message "Killed region containing %s lines" count)))
+   (t ad-do-it))
+  ad-return-value)
+
 (loop
  for f in
  '(sp-beginning-of-sexp sp-end-of-sexp
