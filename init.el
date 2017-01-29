@@ -2,8 +2,8 @@
 ;;
 ;;;;
 
-;; Add the customizations directory to our load path.
-(add-to-list 'load-path "~/.emacs.d/customizations")
+;; Add the lisp directory to our load path.
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; Load Emacspeak immediately. 
 (load "emacspeak.el")
@@ -32,9 +32,9 @@
 ;;;;
 ;; Customizations.
 ;;;;
-(load "clojure-support.el")
+(load "clojure.el")
 (load "editing.el")
-(load "lisps.el")
+(load "lisp.el")
 (load "shell-integration.el")
 (load "smartparens-setup.el")
 (load "smartparens-advice.el")
