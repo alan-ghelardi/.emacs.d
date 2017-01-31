@@ -1,4 +1,13 @@
 
+(use-package projectile
+  :ensure t
+  :config
+  (setq projectile-switch-project-action 'projectile-dired)
+  (projectile-global-mode))
+
+(use-package flx-ido
+  :ensure t)
+
 (use-package company
   :ensure t
   :config
@@ -7,8 +16,11 @@
 (use-package aggressive-indent
   :ensure t
   :config
-  (global-aggressive-indent-mode)
-  (electric-indent-mode -1))
+  (global-aggressive-indent-mode))
+
+;; Don't activate eldoc when typping which is annoying for blind developers, since Emacspeak stops of reading the
+;; code for announcing the eldoc's tips (maybe a amatter of taste). 
+(global-eldoc-mode -1)
 
 ;; Swap the search keybindings to include regex search
 ;; through the keystrokes C-s and C-r. 

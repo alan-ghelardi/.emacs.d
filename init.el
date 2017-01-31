@@ -34,7 +34,6 @@
 ;;;;
 (load "clojure.el")
 (load "editing.el")
-(load "lisp.el")
 (load "shell-integration.el")
 (load "smartparens-setup.el")
 (load "smartparens-advice.el")
