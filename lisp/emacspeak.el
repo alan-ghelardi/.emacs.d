@@ -11,4 +11,4 @@
 ;; I prefer to start the synthesizer in my mother language and switch to english when necessary. 
 (dtk-set-language "pt-br")
 
-(dtk-set-rate 380)
+(dtk-set-rate 400)
