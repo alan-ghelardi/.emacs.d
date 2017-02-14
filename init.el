@@ -38,7 +38,7 @@
 (load "smartparens-setup.el")
 (load "smartparens-advice.el")
 (load "ui.el")
-(load "yasnippet.el")
+(load "yasnippet-setup.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
