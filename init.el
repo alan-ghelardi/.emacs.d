@@ -5,8 +5,8 @@
 ;; Add the lisp directory to our load path.
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
-;; Load Emacspeak immediately. 
-(load "emacspeak.el")
+;; Start Emacspeak as soon as possible.
+(require 'init-emacspeak)
 
 ;;;;
 ;; Packages.
