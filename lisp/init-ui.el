@@ -38,3 +38,5 @@
 
 ;; full path in title bar
 (setq-default frame-title-format "%b (%f)")
+
+(provide 'init-ui)

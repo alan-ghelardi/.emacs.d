@@ -85,3 +85,5 @@ Use an auditory icon if possible."
        (emacspeak-auditory-icon 'section)
        (let ((emacspeak-show-point t))
          (emacspeak-speak-line))))))
+
+(provide 'init-smartparens-advice)

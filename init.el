@@ -27,18 +27,18 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
-  (require 'use-package)
-  
+(require 'use-package)
+
 ;;;;
 ;; Customizations.
 ;;;;
-(load "clojure.el")
-(load "editing.el")
-(load "shell-integration.el")
-(load "smartparens-setup.el")
-(load "smartparens-advice.el")
-(load "ui.el")
-(load "yasnippet-setup.el")
+(require 'init-clojure)
+(require 'init-company)
+(require 'init-editing)
+(require 'init-smartparens)
+(require 'init-smartparens-advice)
+(require 'init-ui)
+(require 'init-yasnippet)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

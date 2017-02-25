@@ -8,11 +8,6 @@
 (use-package flx-ido
   :ensure t)
 
-(use-package company
-  :ensure t
-  :config
-  (global-company-mode))
-
 (use-package aggressive-indent
   :ensure t
   :config
@@ -42,3 +37,5 @@
 ;; Keep backup files in the directory "backups".
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory
                                                "backups"))))
+
+(provide 'init-editing)
