@@ -10,7 +10,7 @@
 ;; I prefer to start the synthesizer in my mother language and switch to english when necessary. 
 (defconst emacspeak-speech-language "pt-br")
 
-(defconst emacspeak-speech-rate 400)
+(defconst emacspeak-speech-rate 380)
 
 (add-to-list 'load-path emacspeak-src-dir)
 
