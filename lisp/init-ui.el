@@ -2,6 +2,9 @@
 ;; User interface customizations.
 ;;;;
 
+;; Always start in full screen mode and with the window maximized.
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; Turn off the menu bar at the top of each frame.
 (menu-bar-mode -1)
 
