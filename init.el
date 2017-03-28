@@ -39,6 +39,7 @@
 (require 'init-smartparens-advice)
 (require 'init-ui)
 (require 'init-yasnippet)
+(require 'init-slack)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.

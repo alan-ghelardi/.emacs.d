@@ -4,10 +4,10 @@
 # Packaging
 .cask
 
-projectile-bookmarks.eld
-
 auto-save-list
 backups
 elpa
+emojis
 network-security.data
 places
+projectile-bookmarks.eld
