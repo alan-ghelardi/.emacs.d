@@ -34,6 +34,8 @@
 ;;;;
 (require 'init-clojure)
 (require 'init-company)
+(require 'init-dired)
+(require 'init-magit)
 (require 'init-editing)
 (require 'init-smartparens)
 (require 'init-smartparens-advice)
