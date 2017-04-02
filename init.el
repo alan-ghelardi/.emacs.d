@@ -35,13 +35,13 @@
 (require 'init-clojure)
 (require 'init-company)
 (require 'init-dired)
-(require 'init-magit)
 (require 'init-editing)
+(require 'init-magit)
+(require 'init-slack)
 (require 'init-smartparens)
 (require 'init-smartparens-advice)
 (require 'init-ui)
 (require 'init-yasnippet)
-(require 'init-slack)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
