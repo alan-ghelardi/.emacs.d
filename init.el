@@ -40,7 +40,7 @@
 (require 'init-slack)
 (require 'init-smartparens)
 (require 'init-smartparens-advice)
-(require 'init-ui)
+(require 'init-general-preferences)
 (require 'init-yasnippet)
 
 (custom-set-variables

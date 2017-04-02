@@ -1,9 +1,12 @@
 ;;;;
-;; User interface customizations.
+;; This module defines general preferences to the Emacs appearance and behavior.
 ;;;;
 
 ;; Always start in full screen mode and with the window maximized.
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; Default width for buffers.
+(setq-default fill-column 120)
 
 ;; Turn off the menu bar at the top of each frame.
 (menu-bar-mode -1)
@@ -42,4 +45,4 @@
 ;; full path in title bar
 (setq-default frame-title-format "%b (%f)")
 
-(provide 'init-ui)
+(provide 'init-general-preferences)
