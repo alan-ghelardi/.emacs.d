@@ -10,7 +10,8 @@
   :ensure t)
 
 (use-package clj-refactor
-  :ensure t)
+  :ensure t
+  :init(setq cljr-warn-on-eval nil))
 
 (defun my-clojure-hook ()
   (clj-refactor-mode 1))
