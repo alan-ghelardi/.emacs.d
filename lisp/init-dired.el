@@ -6,6 +6,6 @@
 
 (add-hook 'dired-mode-hook 'my-dired-keybindings t)
 
-(setq dired-listing-switches "-lXGh --group-directories-first")
+(setq dired-listing-switches "-laXGh --group-directories-first")
 
 (provide 'init-dired)
