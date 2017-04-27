@@ -36,12 +36,14 @@
 (require 'init-company)
 (require 'init-dired)
 (require 'init-editing)
+(require 'init-flycheck)
 (require 'init-magit)
 (require 'init-slack)
 (require 'init-smartparens)
 (require 'init-smartparens-advice)
 (require 'init-general-preferences)
 (require 'init-yasnippet)
+(require 'init-web-developer-tools)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
