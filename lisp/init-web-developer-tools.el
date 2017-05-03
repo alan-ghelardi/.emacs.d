@@ -20,4 +20,9 @@
   (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
   (add-to-list 'auto-mode-alist '("\\.json\\.base\\'" . json-mode)))
 
+(use-package restclient
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.request\\'" . restclient-mode)))
+
 (provide 'init-web-developer-tools)
