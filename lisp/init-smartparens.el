@@ -4,7 +4,12 @@
 (use-package smartparens
   :ensure t
 
+  :init
+  (setq sp-hybrid-kill-excessive-whitespace t)
+
   :bind (
+         ("C-k" . sp-kill-sexp)
+         ("C-M-k" . sp-kill-hybrid-sexp)
          ("C-M-a" . sp-beginning-of-sexp)   
          ("C-M-E" . sp-end-of-sexp)
          ("C-M-f" . sp-forward-sexp)

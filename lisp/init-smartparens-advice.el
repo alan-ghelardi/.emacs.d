@@ -33,7 +33,7 @@
         (dtk-tone 500 30)
         (emacspeak-speak-word 1)))))
 
-(defadvice sp-kill-hybrid-sexp (before emacspeak pre act comp)
+(defadvice sp-kill-sexp (before emacspeak pre act comp)
   "Speak sexp before killing it. "
   (when (ems-interactive-p)
     (emacspeak-auditory-icon 'delete-object)
