@@ -1,13 +1,12 @@
+/*
+!/lisp
+!LICENSE
+!.gitignore
+!init.el
+!README.md
+
 # Compiled
 *.elc
 
 # Packaging
 .cask
-
-auto-save-list
-backups
-elpa
-emojis
-network-security.data
-places
-projectile-bookmarks.eld
