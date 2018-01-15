@@ -2,6 +2,9 @@
 ;; This module defines general preferences to the Emacs appearance and behavior.
 ;;;;
 
+;; Set Firefox as the default browser.
+(setq browse-url-browser-function 'browse-url-firefox)
+
 ;; Always start in full screen mode and with the window maximized.
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -14,7 +17,7 @@
 ;; Show line numbers
 (global-linum-mode)
 
-;; Remove the graphical toolbar. 
+;; Remove the graphical toolbar.
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
 
