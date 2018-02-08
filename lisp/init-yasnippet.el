@@ -1,4 +1,4 @@
-(use-package 'yasnippet-snippets
+(use-package yasnippet-snippets
   :ensure t)
 
 (use-package yasnippet
