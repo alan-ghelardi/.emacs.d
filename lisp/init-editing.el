@@ -40,4 +40,9 @@
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory
                                                "backups"))))
 
+(defun my-changelog-mode-hook ()
+  (setq indent-tabs-mode nil))
+
+(add-hook 'change-log-mode-hook 'my-changelog-mode-hook)
+
 (provide 'init-editing)
