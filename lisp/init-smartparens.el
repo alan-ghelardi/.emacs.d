@@ -16,7 +16,8 @@
          ("C-M-b" . sp-backward-sexp)
          ("C-M-n" . sp-next-sexp)
          ("C-M-p" . sp-previous-sexp)
-         ("C-M-;" . sp-add-to-previous-sexp))
+         ("C-M-;" . sp-forward-barf-sexp)
+         ("C-M-'" . sp-forward-slurp-sexp))
 
   :config
   (progn
