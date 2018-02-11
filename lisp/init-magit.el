@@ -1,4 +1,3 @@
-
 (defun my-magit-keybindings ()
   "Custom keybindings for Magit."
   (interactive "P")
@@ -9,6 +8,7 @@
   :init
   (setq vc-handled-backends nil)
   :config
+  (setq magit-repository-directories '("~/dev/nu" "~/dev/projects"))
   (add-hook 'after-init-hook 'my-magit-keybindings))
 
 (provide 'init-magit)
