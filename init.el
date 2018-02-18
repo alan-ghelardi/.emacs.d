@@ -47,7 +47,6 @@
 (require 'init-magit)
 (require 'init-slack)
 (require 'init-smartparens)
-(require 'init-smartparens-advice)
 (require 'init-general-preferences)
 (require 'init-yasnippet)
 (require 'init-web-developer-tools)
