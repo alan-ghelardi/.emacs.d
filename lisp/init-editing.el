@@ -12,6 +12,9 @@
   :config
   (global-aggressive-indent-mode))
 
+(use-package markdown-mode
+  :ensure t)
+
 ;; Clean whitespaces before saving buffers.
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
