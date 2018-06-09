@@ -30,4 +30,17 @@
 ;; Start Emacspeak.
 (load-file (concat my-emacspeak-src-dir "/lisp/emacspeak-setup.el"))
 
+;; Inline speech support for some packages.
+
+;; yaml-mode
+(defadvice yaml-electric-backspace (around emacspeak pre act comp)
+  "Speak character you're deleting."
+  (cond
+   ((ems-interactive-p)
+    (dtk-tone 500 30 'force)
+    (emacspeak-speak-this-char (preceding-char))
+    ad-do-it)
+   (t ad-do-it))
+  ad-return-value)
+
 (provide 'init-emacspeak)

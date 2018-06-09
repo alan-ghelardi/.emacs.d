@@ -15,7 +15,13 @@
 (use-package markdown-mode
   :ensure t)
 
+(use-package yaml-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("dockerfile$" . yaml-mode)))
+
 ;; Clean whitespaces before saving buffers.
+
 (add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; Don't activate eldoc when typping which is annoying for blind developers, since Emacspeak stops of reading the
