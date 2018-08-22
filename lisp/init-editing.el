@@ -2,7 +2,8 @@
   :ensure t
   :config
   (setq projectile-switch-project-action 'projectile-dired)
-  (projectile-global-mode))
+  (projectile-mode 1)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map))
 
 (use-package flx-ido
   :ensure t)
