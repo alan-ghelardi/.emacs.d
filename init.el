@@ -45,6 +45,7 @@
 (require 'init-editing)
 (require 'init-flycheck)
 (require 'init-magit)
+(require 'init-miscellaneous)
 (require 'init-ruby)
 (require 'init-slack)
 (require 'init-smartparens)
