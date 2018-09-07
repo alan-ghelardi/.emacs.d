@@ -23,9 +23,9 @@
              '("gnu" . "http://elpa.gnu.org/packages/"))
 
 (setq package-archive-priorities
-      `(("melpa" . 20)
+      `(("melpa-stable" . 20)
         ("gnu" . 10)
-        ("melpa-stable" . 0)))
+        ("melpa" . 0)))
 
 (package-initialize)
 
