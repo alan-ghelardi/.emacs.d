@@ -52,6 +52,7 @@
 (require 'init-general-preferences)
 (require 'init-yasnippet)
 (require 'init-web-developer-tools)
+(require 'init-accessibility-improvements)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
