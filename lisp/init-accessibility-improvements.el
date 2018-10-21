@@ -33,7 +33,7 @@
      emidje-next-error emidje-previous-error
      emidje-next-failure emidje-previous-failure
      emidje-next-result emidje-previous-result
-     emidje-jump-to-test-definition
+     emidje-jump-to-definition
      cider-pop-back)
    do
    (eval
