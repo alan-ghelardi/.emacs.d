@@ -41,7 +41,12 @@
        "Provide auditory feedback"
        (when (ems-interactive-p)
          (emacspeak-auditory-icon 'large-movement)
-         (emacspeak-speak-line))))))
+         (emacspeak-speak-line)))))
+
+  (defadvice emidje-format-tabular (after emacspeak pre act comp)
+    "Provide auditory feedback."
+    (when (ems-interactive-p)
+      (emacspeak-auditory-icon 'fill-object))))
 
 (provide 'init-accessibility-improvements)
 
