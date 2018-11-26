@@ -18,4 +18,6 @@
 
 (add-hook 'clojure-mode-hook #'my-clojure-hook)
 
+(emidje-setup)
+
 (provide 'init-clojure)

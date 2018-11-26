@@ -9,7 +9,7 @@
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;; Default width for buffers.
-(setq-default fill-column 120)
+(setq-default fill-column 80)
 
 ;; Turn off the menu bar at the top of each frame.
 (menu-bar-mode -1)
