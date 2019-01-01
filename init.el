@@ -23,9 +23,9 @@
              '("gnu" . "http://elpa.gnu.org/packages/"))
 
 (setq package-archive-priorities
-      `(("melpa-stable" . 20)
+      `(("melpa" . 20)
         ("gnu" . 10)
-        ("melpa" . 0)))
+        ("melpa-stable" . 0)))
 
 (package-initialize)
 
@@ -61,8 +61,30 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (robe inf-ruby seeing-is-believing yasnippet-snippets yaml-mode web-mode use-package smartparens slack restclient projectile markdown-mode magit json-mode flycheck flx-ido company clj-refactor aggressive-indent)))
- '(safe-local-variable-values (quote ((folded-file . t)))))
+    (emidje robe inf-ruby seeing-is-believing yasnippet-snippets yaml-mode web-mode use-package smartparens slack restclient projectile markdown-mode magit json-mode flycheck flx-ido company clj-refactor aggressive-indent)))
+ '(safe-local-variable-values
+   (quote
+    ((eval font-lock-add-keywords nil
+           (\`
+            (((\,
+               (concat "("
+                       (regexp-opt
+                        (quote
+                         ("sp-do-move-op" "sp-do-move-cl" "sp-do-put-op" "sp-do-put-cl" "sp-do-del-op" "sp-do-del-cl"))
+                        t)
+                       "\\_>"))
+              1
+              (quote font-lock-variable-name-face)))))
+     (elisp-lint-indent-specs
+      (cider-propertize-region . 1)
+      (cl-flet . 1)
+      (if-let . 2)
+      (nrepl-dbind-response . 2)
+      (thread-first . 1)
+      (thread-last . 1)
+      (when-let . 1))
+     (elisp-lint-ignored-validators "fill-column")
+     (folded-file . t)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
