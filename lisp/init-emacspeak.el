@@ -30,7 +30,7 @@
 ;; Start Emacspeak.
 (load-file (concat my-emacspeak-src-dir "/lisp/emacspeak-setup.el"))
 
-(require 'emacspeak-muggles)
+;(require 'emacspeak-muggles)
 
 ;; Inline speech support for some packages.
 

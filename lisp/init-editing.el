@@ -10,8 +10,7 @@
 
 (use-package aggressive-indent
   :ensure t
-  :config
-  (global-aggressive-indent-mode))
+  )
 
 (use-package markdown-mode
   :ensure t)

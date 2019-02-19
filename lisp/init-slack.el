@@ -21,8 +21,7 @@
      :client-id my-slack-client-id
      :client-secret my-slack-client-secret
      :token my-slack-token
-     :subscribed-channels my-slack-subscribed-channels)
-    (slack-start))
+     :subscribed-channels my-slack-subscribed-channels))
 
   (use-package alert
     :ensure t
