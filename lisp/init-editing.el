@@ -54,4 +54,9 @@
 
 (add-hook 'change-log-mode-hook 'my-changelog-mode-hook)
 
+(defun my-increase-font-size ()
+  (interactive)
+  (set-face-attribute 'default nil :font "Hack 30")
+(set-frame-font "Hack 20" nil t))
+
 (provide 'init-editing)
