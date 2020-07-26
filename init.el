@@ -44,10 +44,9 @@
 (require 'init-dired)
 (require 'init-editing)
 (require 'init-flycheck)
+(require 'init-golang)
+(require 'init-lsp)
 (require 'init-magit)
-(require 'init-miscellaneous)
-(require 'init-ruby)
-(require 'init-slack)
 (require 'init-smartparens)
 (require 'init-general-preferences)
 (require 'init-yasnippet)
@@ -61,10 +60,11 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (emidje robe inf-ruby seeing-is-believing yasnippet-snippets yaml-mode web-mode use-package smartparens slack restclient projectile markdown-mode magit json-mode flycheck flx-ido company clj-refactor aggressive-indent)))
+    (go-mode lsp-mode emidje robe inf-ruby seeing-is-believing yasnippet-snippets yaml-mode web-mode use-package smartparens slack restclient projectile markdown-mode magit json-mode flycheck flx-ido company clj-refactor aggressive-indent)))
  '(safe-local-variable-values
    (quote
-    ((eval font-lock-add-keywords nil
+    ((emidje-inject-nrepl-middleware-at-jack-in)
+     (eval font-lock-add-keywords nil
            (\`
             (((\,
                (concat "("
