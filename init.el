@@ -27,8 +27,6 @@
         ("gnu" . 10)
         ("melpa-stable" . 0)))
 
-(package-initialize)
-
 ;; Install use-package if necessary.
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
@@ -59,22 +57,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (go-mode lsp-mode emidje robe inf-ruby seeing-is-believing yasnippet-snippets yaml-mode web-mode use-package smartparens slack restclient projectile markdown-mode magit json-mode flycheck flx-ido company clj-refactor aggressive-indent)))
+   '(go-mode lsp-mode emidje robe inf-ruby seeing-is-believing yasnippet-snippets yaml-mode web-mode use-package smartparens slack restclient projectile markdown-mode magit json-mode flycheck flx-ido company clj-refactor aggressive-indent))
  '(safe-local-variable-values
-   (quote
-    ((emidje-inject-nrepl-middleware-at-jack-in)
+   '((emidje-inject-nrepl-middleware-at-jack-in)
      (eval font-lock-add-keywords nil
-           (\`
-            (((\,
-               (concat "("
+           `((,(concat "("
                        (regexp-opt
-                        (quote
-                         ("sp-do-move-op" "sp-do-move-cl" "sp-do-put-op" "sp-do-put-cl" "sp-do-del-op" "sp-do-del-cl"))
+                        '("sp-do-move-op" "sp-do-move-cl" "sp-do-put-op" "sp-do-put-cl" "sp-do-del-op" "sp-do-del-cl")
                         t)
-                       "\\_>"))
-              1
-              (quote font-lock-variable-name-face)))))
+                       "\\_>")
+              1 'font-lock-variable-name-face)))
      (elisp-lint-indent-specs
       (cider-propertize-region . 1)
       (cl-flet . 1)
@@ -84,7 +76,7 @@
       (thread-last . 1)
       (when-let . 1))
      (elisp-lint-ignored-validators "fill-column")
-     (folded-file . t)))))
+     (folded-file . t))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -16,21 +16,20 @@
 
 (add-to-list 'load-path my-emacspeak-src-dir)
 
-(setq dtk-program my-emacspeak-speech-server)
-
-(add-hook 'emacspeak-startup-hook
-          (lambda ()
-            (dtk-set-language my-emacspeak-speech-language)
-            (dtk-set-rate my-emacspeak-speech-rate 1)
-            (emacspeak-sounds-select-theme my-emacspeak-sound-theme)))
-
 (add-hook 'prog-mode-hook (lambda ()
                             (setq emacspeak-audio-indentation nil)))
 
 ;; Start Emacspeak.
 (load-file (concat my-emacspeak-src-dir "/lisp/emacspeak-setup.el"))
 
-;(require 'emacspeak-muggles)
+(with-eval-after-load "emacspeak"
+  (setq dtk-program my-emacspeak-speech-server)
+  (setq dtk-caps nil)
+  (dtk-set-language my-emacspeak-speech-language)
+            (dtk-set-rate my-emacspeak-speech-rate 1)
+            (emacspeak-sounds-select-theme my-emacspeak-sound-theme))
+
+                                        ;(require 'emacspeak-muggles)
 
 ;; Inline speech support for some packages.
 
