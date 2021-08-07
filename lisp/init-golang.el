@@ -2,8 +2,6 @@
   :ensure t)
 
 (use-package gorepl-mode
-  :ensure t
-  :hook
-  (go-mode . #'gorepl-mode))
+  :ensure t)
 
 (provide 'init-golang)
