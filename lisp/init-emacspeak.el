@@ -5,13 +5,13 @@
 (defconst my-emacspeak-src-dir "~/src/emacspeak")
 
 ;; Set Espeak as the default speech engine.
-(defconst my-emacspeak-speech-server "espeak")
+(defconst my-emacspeak-speech-server "outloud")
 
 ;; I prefer to start the synthesizer in my mother language and switch to english when necessary.
 (defconst my-emacspeak-speech-language "pt-br")
 
 ;; Synthesizer's rate
-(defconst my-emacspeak-speech-rate 400)
+(defconst my-emacspeak-speech-rate 10)
 
 ;; Sound's theme used by Emacspeak
 (defconst my-emacspeak-sound-theme "3d/")
