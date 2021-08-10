@@ -11,7 +11,7 @@
 (defconst my-emacspeak-speech-language "pt-br")
 
 ;; Synthesizer's rate
-(defconst my-emacspeak-speech-rate 10)
+(defconst my-emacspeak-speech-rate 1)
 
 ;; Sound's theme used by Emacspeak
 (defconst my-emacspeak-sound-theme "3d/")
