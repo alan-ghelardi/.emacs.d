@@ -11,7 +11,7 @@
 (defconst my-emacspeak-speech-language "pt-br")
 
 ;; Synthesizer's rate
-(defconst my-emacspeak-speech-rate 1)
+(defconst my-emacspeak-speech-rate 100)
 
 ;; Sound's theme used by Emacspeak
 (defconst my-emacspeak-sound-theme "3d/")
@@ -27,11 +27,12 @@
         (setq dtk-split-caps nil)
         (setq-default dtk-split-caps nil)))))
 
+(setq-default dtk-program my-emacspeak-speech-server)
+
 ;; Start Emacspeak.
 (load-file (concat my-emacspeak-src-dir "/lisp/emacspeak-setup.el"))
 
 (with-eval-after-load "emacspeak"
-  (setq dtk-program my-emacspeak-speech-server)
   (setq-default dtk-caps nil)
   (setq-default dtk-split-caps nil)
   (dtk-set-language my-emacspeak-speech-language)
