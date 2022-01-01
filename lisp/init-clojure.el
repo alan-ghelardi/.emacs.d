@@ -13,12 +13,6 @@
   :ensure t
   :init(setq cljr-warn-on-eval nil))
 
-(use-package emidje
-  :ensure t
-  :config
-  (eval-after-load 'cider
-    #'emidje-setup))
-
 (defun my-clojure-hook ()
   (clj-refactor-mode 1))
 
