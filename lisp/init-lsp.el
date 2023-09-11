@@ -8,6 +8,7 @@
   :commands (lsp lsp-deferred)
   :hook (go-mode . lsp-deferred)
   (js-mode . lsp-deferred)
+  (yaml-mode . lsp-deferred)
   (go-mode . golang-disable-emacspeak-message-echo)
   )
 

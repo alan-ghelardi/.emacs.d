@@ -14,8 +14,6 @@
 ;; Turn off the menu bar at the top of each frame.
 (menu-bar-mode -1)
 
-;; Show line numbers
-(global-linum-mode)
 
 ;; Remove the graphical toolbar.
 (when (fboundp 'tool-bar-mode)
