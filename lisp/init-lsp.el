@@ -12,6 +12,11 @@
   (go-mode . golang-disable-emacspeak-message-echo)
   )
 
+(use-package dap-mode
+  :ensure t)
+
+(require 'dap-dlv-go)
+
 ;; Set up before-save hooks to format buffer and add/delete imports.
 (defun lsp-go-install-save-hooks ()
   (add-hook 'before-save-hook #'lsp-format-buffer t t)

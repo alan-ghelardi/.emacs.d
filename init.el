@@ -50,3 +50,17 @@
 (require 'init-yasnippet)
 (require 'init-web-developer-tools)
 (require 'init-accessibility-improvements)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(dap-mode yasnippet-snippets yaml-mode web-mode smartparens restclient projectile magit lsp-mode json-mode gorepl-mode go-mode flycheck flx-ido company clj-refactor aggressive-indent))
+ '(safe-local-variable-values '((emidje-inject-nrepl-middleware-at-jack-in))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
