@@ -16,16 +16,22 @@
 ;; Sound's theme used by Emacspeak
 (defconst my-emacspeak-sound-theme "3d/")
 
+(defun alangh-disable-dtk-caps ()
+  "Disable dtk caps."
+  (when dtk-caps
+    (setq dtk-caps nil)
+    (setq-default dtk-caps nil))
+  (when dtk-split-caps
+    (setq dtk-split-caps nil)
+    (setq-default dtk-split-caps nil)))
+
 (add-to-list 'load-path my-emacspeak-src-dir)
 
 (add-hook 'prog-mode-hook (lambda ()
                             (setq emacspeak-audio-indentation nil)
-                            (when dtk-caps
-      (setq dtk-caps nil)
-      (setq-default dtk-caps nil)
-      (when dtk-split-caps
-        (setq dtk-split-caps nil)
-        (setq-default dtk-split-caps nil)))))
+                            (alangh-disable-dtk-caps)))
+
+(add-hook 'markdown-mode-hook #'alangh-disable-dtk-caps)
 
 ;; Start Emacspeak.
 (load-file (concat my-emacspeak-src-dir "/lisp/emacspeak-setup.el"))
@@ -35,8 +41,9 @@
   (setq-default dtk-caps nil)
   (setq-default dtk-split-caps nil)
   (dtk-set-language my-emacspeak-speech-language)
-            (dtk-set-rate my-emacspeak-speech-rate 1)
-            (emacspeak-sounds-select-theme my-emacspeak-sound-theme))
+  (dtk-set-rate my-emacspeak-speech-rate 1)
+  (setq-default emacspeak-comint-autospeak t)
+  (emacspeak-sounds-select-theme my-emacspeak-sound-theme))
 
 ;; Inline speech support for some packages.
 
