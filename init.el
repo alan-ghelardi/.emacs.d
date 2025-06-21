@@ -45,6 +45,7 @@
 (require 'init-golang)
 (require 'init-lsp)
 (require 'init-magit)
+(require 'init-org)
 (require 'init-smartparens)
 (require 'init-general-preferences)
 (require 'init-yasnippet)
@@ -58,7 +59,10 @@
  '(ignored-local-variable-values '((folded-file . t)))
  '(package-selected-packages
    '(dap-mode yasnippet-snippets yaml-mode web-mode smartparens restclient projectile magit lsp-mode json-mode gorepl-mode go-mode flycheck flx-ido company clj-refactor aggressive-indent))
- '(safe-local-variable-values '((emidje-inject-nrepl-middleware-at-jack-in))))
+ '(safe-local-variable-values
+   '((inf-clojure-custom-repl-type . clojure)
+     (inf-clojure-custom-startup . "clojure -A:dev")
+     (emidje-inject-nrepl-middleware-at-jack-in))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
