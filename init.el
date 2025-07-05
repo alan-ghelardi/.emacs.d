@@ -51,14 +51,15 @@
 (require 'init-yasnippet)
 (require 'init-web-developer-tools)
 (require 'init-accessibility-improvements)
+(require 'init-ai)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ignored-local-variable-values '((folded-file . t)))
- '(package-selected-packages
-   '(dap-mode yasnippet-snippets yaml-mode web-mode smartparens restclient projectile magit lsp-mode json-mode gorepl-mode go-mode flycheck flx-ido company clj-refactor aggressive-indent))
+ '(package-selected-packages nil)
  '(safe-local-variable-values
    '((inf-clojure-custom-repl-type . clojure)
      (inf-clojure-custom-startup . "clojure -A:dev")
